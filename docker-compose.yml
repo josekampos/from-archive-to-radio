@@ -45,8 +45,8 @@ services:
       - PLAYLIST_FILE=/radio/playlist.m3u
       - CACHE_DIR=/var/radio/cache
       - TARGET_TRACKS=300
-      - MAX_FILE_MB=1000
-      - MIN_FREE_MB=1024
       - USER_AGENT=ArchiveRadioFetcher/1.0 (+contact:you@example.com)
+      - RADIO_DIR=/radio
+      - PLAYLIST_PATH=/radio/playlist.m3u
     restart: unless-stopped
 

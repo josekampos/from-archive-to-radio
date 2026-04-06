@@ -24424,3 +24424,19 @@
 [2026-04-06  21:44:12] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190619DESTERRONICS__160619"
 [2026-04-06  21:44:12] INFO source/source_main listener count on /live.aac now 0
 [2026-04-06  21:44:12] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:49:08] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:49:08] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-06  21:49:08] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:49:08] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-06  21:49:09] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:49:09] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:49:09] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:49:09] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:49:09] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:49:09] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:49:09] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "190626_201907__190626"
+[2026-04-06  21:49:09] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:49:09] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:49:09] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190626_201907__190626"
+[2026-04-06  21:49:09] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:49:09] INFO source/source_main listener count on /live.mp3 now 0
