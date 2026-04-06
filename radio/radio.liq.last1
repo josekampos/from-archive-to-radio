@@ -1,0 +1,62 @@
+# Logging (to stdout -> docker logs)
+set("log.level", 3)
+
+# Main playlist (local cached files). Fallible if empty.
+main = playlist("/radio/playlist.m3u", mode="randomize", reload_mode="watch")
+
+# Truly infallible emergency source (silence)
+emergency = blank()
+
+# Program source: playlist if available, otherwise silence
+s = fallback(track_sensitive=false, [main, emergency])
+
+# Icecast connection
+icecast_host = "icecast"
+icecast_port = 8000
+icecast_pass = getenv("ICECAST_SOURCE_PASSWORD","")
+
+# ----- Encoder #1: AAC 64 kbps (ADTS, AAC-LC)
+enc_aac = %fdkaac(
+  channels=2,
+  samplerate=44100,
+  bitrate=64,
+  aot="mpeg4_aac_lc",
+  transmux="adts"
+)
+
+output.icecast(
+  enc_aac,
+  host=icecast_host,
+  port=icecast_port,
+  password="CHANGE_ME_SOURCE",
+  mount="live.aac",
+  name="Archive Radio (AAC 64)",
+  description="24/7 continuous AAC stream",
+  genre="various",
+  send_icy_metadata=true,
+  icy_metadata=["title","artist"],
+  s
+)
+
+# ----- Encoder #2: MP3 (browser-friendly)
+# 128 kbps CBR is a safe default; you can drop to 96 for less bandwidth.
+enc_mp3 = %mp3(
+  stereo=true,
+  samplerate=44100,
+  bitrate=128
+)
+
+output.icecast(
+  enc_mp3,
+  host=icecast_host,
+  port=icecast_port,
+  password="CHANGE_ME_SOURCE",
+  mount="live.mp3",
+  name="Archive Radio (MP3 128)",
+  description="24/7 continuous MP3 stream",
+  genre="various",
+  send_icy_metadata=true,
+  icy_metadata=["title","artist"],
+  s
+)
+

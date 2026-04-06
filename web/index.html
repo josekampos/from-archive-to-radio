@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desterronics Radio</title>
+  <style>
+    :root{
+      --bg1:#0b1020;
+      --bg2:#0a1a2e;
+      --card:rgba(255,255,255,0.06);
+      --card2:rgba(255,255,255,0.08);
+      --border:rgba(255,255,255,0.12);
+      --text:rgba(255,255,255,0.92);
+      --muted:rgba(255,255,255,0.62);
+      --accent:#7dd3fc;
+      --accent2:#a78bfa;
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(900px 500px at 15% 10%, rgba(125, 211, 252, 0.18), transparent 60%),
+                  radial-gradient(900px 500px at 85% 15%, rgba(167, 139, 250, 0.16), transparent 60%),
+                  linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 16px;
+    }
+
+    .wrap{
+      width: min(980px, 100%);
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+
+    @media (max-width: 860px){
+      .wrap{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: linear-gradient(180deg, var(--card), rgba(255,255,255,0.03));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      background: linear-gradient(135deg, rgba(125,211,252,0.18), rgba(167,139,250,0.16), transparent 55%);
+      opacity:0.55;
+      pointer-events:none;
+      mask: linear-gradient(#000, transparent 70%);
+    }
+
+    .hero{
+      padding: 22px 22px 18px 22px;
+    }
+
+    .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+    }
+
+    .logo{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(125,211,252,0.35), rgba(167,139,250,0.35));
+      border: 1px solid rgba(255,255,255,0.18);
+      display:grid;
+      place-items:center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .logo svg{ opacity:0.95; }
+
+    h1{
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 0.2px;
+      font-weight: 650;
+    }
+
+    .subtitle{
+      margin: 2px 0 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .pill{
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      padding: 6px 10px;
+      border-radius: 999px;
+      display:flex;
+      gap: 8px;
+      align-items:center;
+      white-space:nowrap;
+      position:relative;
+      z-index:1;
+    }
+
+    .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 0 4px rgba(239,68,68,0.12);
+    }
+    .dot.ok{
+      background:#22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.12);
+    }
+
+    .np{
+      margin-top: 18px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      position:relative;
+      z-index:1;
+    }
+
+    .np-label{
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .np-title{
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.25;
+      margin: 0 0 6px 0;
+      word-break: break-word;
+    }
+
+    .np-meta{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .controls{
+      margin-top: 14px;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+      position:relative;
+      z-index:1;
+    }
+
+    .btn{
+      border: 1px solid rgba(255,255,255,0.16);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      user-select:none;
+      transition: transform .05s ease, background .2s ease;
+    }
+    .btn:active{ transform: scale(0.98); }
+    .btn.primary{
+      border-color: rgba(125,211,252,0.35);
+      background: linear-gradient(180deg, rgba(125,211,252,0.22), rgba(167,139,250,0.12));
+    }
+    .btn small{
+      font-weight: 600;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .row{
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .kv{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .kv b{ color: var(--text); font-weight: 650; }
+
+    .side{
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+    }
+
+    .panel h2{
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.02em;
+      font-weight: 650;
+      position:relative;
+      z-index:1;
+    }
+
+    .panel p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      position:relative;
+      z-index:1;
+    }
+
+    .links{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:1;
+    }
+    a.link{
+      color: rgba(255,255,255,0.85);
+      text-decoration:none;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+    a.link:hover{ border-color: rgba(255,255,255,0.22); }
+
+    .hint{
+      margin-top: 10px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.52);
+      position:relative;
+      z-index:1;
+    }
+
+    audio{ display:none; } /* we control playback via buttons */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card hero">
+      <div class="topline">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18V6l12-2v12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="7" cy="18" r="3" stroke="white" stroke-width="2"/>
+              <circle cx="19" cy="16" r="3" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div>
+            <h1>Desterronics Radio</h1>
+            <div class="subtitle">Continuous stream from Desterronics live recorded sessions</div>
+          </div>
+        </div>
+
+        <div class="pill">
+          <span id="dot" class="dot"></span>
+          <span id="statusText">Connecting…</span>
+        </div>
+      </div>
+
+      <div class="np">
+        <div class="np-label">Now playing</div>
+        <p class="np-title" id="npTitle">Loading…</p>
+        <div class="np-meta">
+          <span id="npMount">Mount: /live.mp3</span>
+          <span id="npListeners">Listeners: —</span>
+          <span id="npStarted">Started: —</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn primary" id="playBtn">
+          <span id="playIcon">▶</span>
+          <span id="playText">Play</span>
+          <small>(MP3)</small>
+        </button>
+
+        <button class="btn" id="pauseBtn">⏸ Pause</button>
+
+        <div class="row">
+          <div class="kv"><b>Stream:</b> <span id="streamUrl">/live.mp3</span></div>
+          <div class="kv"><b>Refresh:</b> 5s</div>
+        </div>
+      </div>
+
+      <div class="hint">
+        Tip: If you prefer AAC, open <code>/live.aac</code> in VLC. Most browsers work best with MP3.
+      </div>
+
+      <audio id="player" preload="none">
+        <source src="/live.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="side">
+      <div class="card panel">
+        <h2>About</h2>
+        <p>
+          This is desterronics radio: a continuous stream of sessions recorded live from the desterronics sessions.
+        </p>
+        <div class="links">
+          <a class="link" href="/live.mp3">Open MP3 stream</a>
+          <a class="link" href="/live.aac">Open AAC stream</a>
+          <a class="link" href="/status-json" target="_blank" rel="noopener">Status JSON</a>
+        </div>
+      </div>
+
+      <div class="card panel">
+        <h2>Status</h2>
+        <p id="rawStatus" class="muted">Loading status…</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const player = document.getElementById("player");
+    const playBtn = document.getElementById("playBtn");
+    const pauseBtn = document.getElementById("pauseBtn");
+
+    const dot = document.getElementById("dot");
+    const statusText = document.getElementById("statusText");
+    const npTitle = document.getElementById("npTitle");
+    const npListeners = document.getElementById("npListeners");
+    const npStarted = document.getElementById("npStarted");
+    const rawStatus = document.getElementById("rawStatus");
+
+    const playIcon = document.getElementById("playIcon");
+    const playText = document.getElementById("playText");
+
+    function setStatus(ok, msg){
+      dot.classList.toggle("ok", !!ok);
+      statusText.textContent = msg;
+    }
+
+    function fmtListeners(x){
+      if (x === undefined || x === null) return "—";
+      return String(x);
+    }
+
+    async function updateNowPlaying(){
+      try{
+        const r = await fetch("/status-json", { cache: "no-store" });
+        const j = await r.json();
+
+        const sources = Array.isArray(j.icestats.source) ? j.icestats.source : [j.icestats.source];
+        const s = sources.find(x => (x.listenurl || "").includes("/live.mp3")) || sources[0];
+
+        if (!s){
+          setStatus(false, "No source");
+          npTitle.textContent = "(no title)";
+          rawStatus.textContent = "Icecast returned no source information.";
+          return;
+        }
+
+        const title = s.title || "(no title yet)";
+        npTitle.textContent = title;
+
+        npListeners.textContent = "Listeners: " + fmtListeners(s.listeners);
+        npStarted.textContent = "Started: " + (s.stream_start || "—");
+
+        rawStatus.textContent =
+          `Mounts: ${sources.length} · Server: ${j.icestats.server_id || "icecast"} · ` +
+          `MP3 listeners: ${fmtListeners(s.listeners)} · Bitrate: ${s.bitrate || "—"}`;
+
+        setStatus(true, "Live");
+      } catch(e){
+        setStatus(false, "Status error");
+        rawStatus.textContent = "Unable to fetch /status-json (check nginx proxy and icecast availability).";
+      }
+    }
+
+    function setPlayUI(isPlaying){
+      playIcon.textContent = isPlaying ? "⏵" : "▶";
+      playText.textContent = isPlaying ? "Playing" : "Play";
+    }
+
+    playBtn.addEventListener("click", async () => {
+      try{
+        await player.play();
+        setPlayUI(true);
+      } catch(e){
+        setStatus(false, "Playback blocked");
+        rawStatus.textContent = "Browser blocked autoplay. Click Play again or allow sound.";
+      }
+    });
+
+    pauseBtn.addEventListener("click", () => {
+      player.pause();
+      setPlayUI(false);
+    });
+
+    player.addEventListener("playing", () => setPlayUI(true));
+    player.addEventListener("pause", () => setPlayUI(false));
+    player.addEventListener("error", () => setStatus(false, "Player error"));
+
+    updateNowPlaying();
+    setInterval(updateNowPlaying, 5000);
+  </script>
+</body>
+</html>
+

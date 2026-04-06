@@ -1,0 +1,48 @@
+# Logging (to stdout via Docker logs)
+set("log.level", 3)
+
+# Main playlist (local cached files). This is fallible if empty.
+main = playlist("/radio/playlist.m3u", mode="randomize", reload_mode="watch")
+
+# Truly infallible emergency source (silence). This prevents crashes on startup/empty cache.
+emergency = blank()
+
+# Final program source: playlist if available, otherwise silence.
+s = fallback(track_sensitive=false, [main, emergency])
+
+# Optional: write "now playing" JSON (safe even if some tags are missing).
+def meta_get(m, k) =
+  try
+    m[k]
+  catch _ do
+    ""
+  end
+end
+
+def write_nowplaying(m) =
+  title  = meta_get(m, "title")
+  artist = meta_get(m, "artist")
+  payload = json.stringify({title=title, artist=artist, ts=time()})
+  file.write(data=payload ^ "\n", "/radio/nowplaying.json")
+end
+
+# Enable if you want nowplaying updates:
+# s = s.on_metadata(write_nowplaying)
+
+# AAC 64 kbps using FDK-AAC, ADTS container, AAC-LC profile
+enc = %fdkaac(channels=2, samplerate=44100, bitrate=64, aot="mpeg4_aac_lc", transmux="adts")
+
+output.icecast(
+  enc,
+  host="icecast",
+  port=8000,
+  password="CHANGE_ME_SOURCE",
+  mount="live.aac",
+  name="Archive Radio",
+  description="24/7 continuous AAC stream",
+  genre="various",
+  send_icy_metadata=true,
+  icy_metadata=["title","artist"],
+  s
+)
+

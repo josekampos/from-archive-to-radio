@@ -1,0 +1,82 @@
+# Logging (to stdout -> docker logs)
+set("log.level", 3)
+
+# Main playlist (local cached files). Fallible if empty.
+main = playlist("/radio/playlist.m3u", mode="randomize", reload=1, reload_mode="rounds")
+
+# Truly infallible emergency source (silence)
+emergency = blank()
+
+# Program source: playlist if available, otherwise silence
+s = fallback(track_sensitive=false, [main, emergency])
+
+# Icecast connection
+icecast_host = "icecast"
+icecast_port = 8000
+icecast_pass = getenv("ICECAST_SOURCE_PASSWORD","")
+
+# ----- Encoder #1: AAC 64 kbps (ADTS, AAC-LC)
+enc_aac = %fdkaac(
+  channels=2,
+  samplerate=44100,
+  bitrate=64,
+  aot="mpeg4_aac_lc",
+  transmux="adts"
+)
+
+# add duration
+
+def meta_get(m, k) =
+  try m[k] catch _ do "" end
+end
+
+def write_nowplaying(m) =
+  title = meta_get(m,"title")
+  # duration in seconds is usually available as m["duration"] in Liquidsoap for file sources
+  dur_s =
+    try int_of_float(float_of_string(meta_get(m,"duration")))
+    catch _ do 0 end
+
+  payload = json.stringify({title=title, started_at=time(), duration=dur_s})
+  file.write(data=payload ^ "\n", "/radio/nowplaying.json")
+end
+
+# call on metadata changes
+#s = s.on_metadata(write_nowplaying)
+
+output.icecast(
+  enc_aac,
+  host=icecast_host,
+  port=icecast_port,
+  password="CHANGE_ME_SOURCE",
+  mount="live.aac",
+  name="Desterronics Radio (AAC 64)",
+  description="24/7 continuous AAC stream",
+  genre="various",
+  send_icy_metadata=true,
+  icy_metadata=["title"],
+  s
+)
+
+# ----- Encoder #2: MP3 (browser-friendly)
+# 128 kbps CBR is a safe default; you can drop to 96 for less bandwidth.
+enc_mp3 = %mp3(
+  stereo=true,
+  samplerate=44100,
+  bitrate=128
+)
+
+output.icecast(
+  enc_mp3,
+  host=icecast_host,
+  port=icecast_port,
+  password="CHANGE_ME_SOURCE",
+  mount="live.mp3",
+  name="Desterronics Radio (MP3 128)",
+  description="24/7 continuous MP3 stream",
+  genre="various",
+  send_icy_metadata=true,
+  icy_metadata=["title"],
+  s
+)
+

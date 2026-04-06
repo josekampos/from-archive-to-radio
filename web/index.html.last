@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desterronics Radio</title>
+  <style>
+    body { font-family: sans-serif; margin: 24px; max-width: 800px; }
+    .box { padding: 16px; border: 1px solid #ddd; border-radius: 10px; }
+    .np { font-size: 18px; font-weight: 600; }
+    .muted { color: #666; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Desterronics Radio</h1>
+
+  <div class="box">
+    <div class="np">Now playing: <span id="np">Loading…</span></div>
+    <div class="muted" id="ts"></div>
+  </div>
+
+  <p style="margin-top: 16px;">
+    <audio controls autoplay preload="none" style="width: 100%;">
+      <source src="/live.mp3" type="audio/mpeg">
+    </audio>
+  </p>
+
+  <script>
+    async function updateNowPlaying() {
+      try {
+        const r = await fetch("/status-json", { cache: "no-store" });
+        const j = await r.json();
+
+        const sources = Array.isArray(j.icestats.source) ? j.icestats.source : [j.icestats.source];
+        const s = sources.find(x => (x.listenurl || "").includes("/live.mp3")) || sources[0];
+
+        document.getElementById("np").textContent = (s && s.title) ? s.title : "(no title)";
+        document.getElementById("ts").textContent = (s && s.stream_start) ? ("Stream started: " + s.stream_start) : "";
+      } catch (e) {
+        document.getElementById("np").textContent = "Error loading status";
+        document.getElementById("ts").textContent = "";
+      }
+    }
+
+    updateNowPlaying();
+    setInterval(updateNowPlaying, 5000);
+  </script>
+</body>
+</html>
+
