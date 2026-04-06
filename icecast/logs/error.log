@@ -24263,3 +24263,133 @@
 [2026-04-06  21:04:04] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190213_201904__190213"
 [2026-04-06  21:04:04] INFO source/source_main listener count on /live.aac now 0
 [2026-04-06  21:04:04] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:31:16] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:31:16] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-06  21:31:16] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:31:16] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-06  21:31:27] INFO main/main Icecast 2.4.4 server started
+[2026-04-06  21:31:27] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2026-04-06  21:31:27] INFO yp/yp_update_thread YP update thread started
+[2026-04-06  21:31:28] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.3
+[2026-04-06  21:31:28] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:31:28] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.3
+[2026-04-06  21:31:28] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:31:28] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:31:28] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:31:28] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "190213_201904__190213"
+[2026-04-06  21:31:28] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:31:28] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:31:28] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190213_201904__190213"
+[2026-04-06  21:31:28] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:31:28] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:32:15] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:32:15] INFO source/source_shutdown Source from 172.18.0.3 at "/live.aac" exiting
+[2026-04-06  21:32:15] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:32:15] INFO source/source_shutdown Source from 172.18.0.3 at "/live.mp3" exiting
+[2026-04-06  21:32:16] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:32:16] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:32:16] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:32:16] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:32:16] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:32:16] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:32:16] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics180606__Desterronics-180606"
+[2026-04-06  21:32:16] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:32:16] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:32:16] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics180606__Desterronics-180606"
+[2026-04-06  21:32:16] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:32:16] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:32:25] INFO main/main Icecast 2.4.4 server started
+[2026-04-06  21:32:25] INFO yp/yp_update_thread YP update thread started
+[2026-04-06  21:32:25] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2026-04-06  21:32:29] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:32:29] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:32:29] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:32:29] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:32:29] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics180606__Desterronics-180606"
+[2026-04-06  21:32:29] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:32:29] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:32:29] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:32:29] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:32:29] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics180606__Desterronics-180606"
+[2026-04-06  21:32:29] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:32:29] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:33:04] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:33:04] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-06  21:33:04] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:33:04] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-06  21:33:05] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:33:05] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:33:05] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:33:05] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:33:05] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:33:05] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:33:05] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "desterronics-220504__Desterronics_220504"
+[2026-04-06  21:33:05] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:33:05] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:33:05] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "desterronics-220504__Desterronics_220504"
+[2026-04-06  21:33:05] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:33:05] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:33:14] INFO main/main Icecast 2.4.4 server started
+[2026-04-06  21:33:14] INFO yp/yp_update_thread YP update thread started
+[2026-04-06  21:33:14] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2026-04-06  21:33:17] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:33:17] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:33:17] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:33:17] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:33:17] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "desterronics-220504__Desterronics_220504"
+[2026-04-06  21:33:17] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:33:17] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:33:17] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:33:17] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:33:17] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "desterronics-220504__Desterronics_220504"
+[2026-04-06  21:33:17] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:33:17] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:33:22] INFO source/source_main listener count on /live.mp3 now 1
+[2026-04-06  21:33:54] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:42:06] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:42:06] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-06  21:42:06] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:42:06] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-06  21:42:07] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:42:07] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:07] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:42:07] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:07] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:42:07] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:07] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics180620__Desterronics-180620"
+[2026-04-06  21:42:07] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:42:07] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:07] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics180620__Desterronics-180620"
+[2026-04-06  21:42:07] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:42:07] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:42:29] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-06  21:42:29] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-06  21:42:29] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-06  21:42:29] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-06  21:42:30] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:42:30] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:30] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:42:30] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:30] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:42:30] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:30] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "190206_201904__190206"
+[2026-04-06  21:42:30] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:42:30] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:30] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190206_201904__190206"
+[2026-04-06  21:42:30] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:42:30] INFO source/source_main listener count on /live.aac now 0
+[2026-04-06  21:42:39] INFO main/main Icecast 2.4.4 server started
+[2026-04-06  21:42:39] INFO yp/yp_update_thread YP update thread started
+[2026-04-06  21:42:39] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2026-04-06  21:42:43] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-06  21:42:43] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:43] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-06  21:42:43] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:43] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "190206_201904__190206"
+[2026-04-06  21:42:43] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-06  21:42:43] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-06  21:42:43] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-06  21:42:43] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-06  21:42:43] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "190206_201904__190206"
+[2026-04-06  21:42:43] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-06  21:42:43] INFO source/source_main listener count on /live.aac now 0

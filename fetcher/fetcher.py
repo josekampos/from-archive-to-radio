@@ -176,7 +176,8 @@ def write_playlist() -> None:
 
     lines = []
     for p in tracks:
-        title = sanitize_title(p.stem)  # identifier__stem
+        stem = p.stem.split("__", 1)[1] if "__" in p.stem else p.stem
+        title = sanitize_title(stem.replace("_", " "))
         lines.append(f'annotate:title="{title}":{p.as_posix()}')
 
     tmp = PLAYLIST_PATH.with_suffix(".m3u.tmp")

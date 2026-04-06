@@ -30,7 +30,7 @@
     <port>8000</port>
   </listen-socket>
 
-  <fileserve>0</fileserve>
+  <fileserve>1</fileserve>
 
   <mount>
     <mount-name>/live.aac</mount-name>
