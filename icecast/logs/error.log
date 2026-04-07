@@ -24957,3 +24957,71 @@
 [2026-04-07  07:44:24] INFO source/source_main listener count on /live.aac now 0
 [2026-04-07  07:44:24] INFO source/source_main listener count on /live.mp3 now 0
 [2026-04-07  08:05:57] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../etc/passwd"
+[2026-04-07  09:51:22] INFO source/get_next_buffer End of Stream /live.aac
+[2026-04-07  09:51:22] INFO source/source_shutdown Source from 172.18.0.5 at "/live.aac" exiting
+[2026-04-07  09:51:22] INFO source/get_next_buffer End of Stream /live.mp3
+[2026-04-07  09:51:22] INFO source/source_shutdown Source from 172.18.0.5 at "/live.mp3" exiting
+[2026-04-07  09:51:24] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-07  09:51:24] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-07  09:51:24] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-07  09:51:24] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-07  09:51:24] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-07  09:51:24] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  09:51:24] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-200213"
+[2026-04-07  09:51:24] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-07  09:51:24] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  09:51:24] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-200213"
+[2026-04-07  09:51:24] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-07  09:51:24] INFO source/source_main listener count on /live.aac now 0
+[2026-04-07  09:51:33] INFO main/main Icecast 2.4.4 server started
+[2026-04-07  09:51:33] INFO yp/yp_update_thread YP update thread started
+[2026-04-07  09:51:33] INFO connection/get_ssl_certificate No SSL capability on any configured ports
+[2026-04-07  09:51:37] INFO connection/_handle_source_request Source logging in at mountpoint "/live.aac" from 172.18.0.5
+[2026-04-07  09:51:37] WARN format/format_get_type Unsupported or legacy stream type: "audio/aac". Falling back to generic minimal handler for best effort.
+[2026-04-07  09:51:37] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-07  09:51:37] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  09:51:37] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-200213"
+[2026-04-07  09:51:37] INFO connection/_handle_source_request Source logging in at mountpoint "/live.mp3" from 172.18.0.5
+[2026-04-07  09:51:37] WARN format/format_get_type Unsupported or legacy stream type: "audio/mpeg". Falling back to generic minimal handler for best effort.
+[2026-04-07  09:51:37] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-07  09:51:37] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  09:51:37] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-200213"
+[2026-04-07  09:51:37] INFO source/source_main listener count on /live.aac now 0
+[2026-04-07  09:51:37] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-07  10:27:03] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  10:27:03] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  10:27:55] EROR connection/_handle_connection HTTP request parsing failed
+[2026-04-07  10:45:11] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  10:45:11] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  11:03:26] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  11:03:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  12:16:00] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  12:16:00] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  12:23:11] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  12:23:11] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  13:37:19] EROR connection/_handle_connection HTTP request parsing failed
+[2026-04-07  13:37:19] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  13:37:19] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  13:37:37] INFO fserve/fserve_client_create checking for file /sitemap.xml (/usr/share/icecast2/web/sitemap.xml)
+[2026-04-07  13:37:37] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/sitemap.xml" No such file or directory
+[2026-04-07  14:19:47] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-07  14:19:47] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  14:19:47] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics 190807 v1"
+[2026-04-07  14:19:47] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-07  14:19:47] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  14:19:47] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics 190807 v1"
+[2026-04-07  15:58:11] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../etc/passwd"
+[2026-04-07  16:31:01] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  16:31:01] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  18:02:20] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:02:24] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:02:28] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:02:31] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:02:35] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:02:38] EROR connection/_handle_connection Wrong request type from client
+[2026-04-07  18:23:11] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-07  18:23:11] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  18:23:11] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "DESTERRONICS 27nov2025"
+[2026-04-07  18:23:11] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-07  18:23:11] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  18:23:11] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "DESTERRONICS 27nov2025"

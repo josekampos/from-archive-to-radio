@@ -123,6 +123,14 @@ def local_target_name(identifier: str, remote_name: str) -> str:
     return f"{identifier}__{stem}.{ext}"
 
 
+def cached_tracks() -> list[Path]:
+    """Return only valid downloaded audio files (excludes .part and .skip files)."""
+    return [
+        p for p in CACHE_DIR.iterdir()
+        if p.is_file() and p.suffix.lstrip(".").lower() in AUDIO_EXTS
+    ]
+
+
 def download_file(identifier: str, remote_name: str, target_path: Path) -> None:
     url = IA_DOWNLOAD.format(identifier=identifier, filename=quote(remote_name))
     part = target_path.with_suffix(target_path.suffix + ".part")
@@ -143,7 +151,7 @@ def download_file(identifier: str, remote_name: str, target_path: Path) -> None:
 
 def enforce_cache_limits() -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    files = [p for p in CACHE_DIR.iterdir() if p.is_file() and not p.name.endswith(".part")]
+    files = cached_tracks()
     # Count cap (soft)
     if len(files) > CACHE_TARGET_COUNT:
         files.sort(key=lambda p: p.stat().st_mtime)  # oldest first
@@ -154,7 +162,7 @@ def enforce_cache_limits() -> None:
                 pass
 
     # Size cap (hard)
-    files = [p for p in CACHE_DIR.iterdir() if p.is_file() and not p.name.endswith(".part")]
+    files = cached_tracks()
     total = sum(p.stat().st_size for p in files)
     max_bytes = int(CACHE_MAX_GB * (1024 ** 3))
     if total > max_bytes:
@@ -171,8 +179,7 @@ def enforce_cache_limits() -> None:
 
 def write_playlist() -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    tracks = [p for p in CACHE_DIR.iterdir() if p.is_file() and not p.name.endswith(".part")]
-    tracks.sort(key=lambda p: p.name.lower())
+    tracks = sorted(cached_tracks(), key=lambda p: p.name.lower())
 
     lines = []
     for p in tracks:
@@ -205,12 +212,10 @@ def main() -> None:
                 log(f"fetched identifiers from advancedsearch ({len(ids)})")
 
             # Download until we have at least CACHE_TARGET_COUNT tracks (or run out)
-            existing = {p.name for p in CACHE_DIR.iterdir() if p.is_file()}
             downloaded = 0
             for identifier in ids:
                 # Stop if we have enough
-                have = [p for p in CACHE_DIR.iterdir() if p.is_file() and not p.name.endswith(".part")]
-                if len(have) >= CACHE_TARGET_COUNT:
+                if len(cached_tracks()) >= CACHE_TARGET_COUNT:
                     break
 
                 meta_url = IA_METADATA.format(identifier=identifier)
@@ -225,8 +230,10 @@ def main() -> None:
                 remote_name = f["name"]
                 local_name = local_target_name(identifier, remote_name)
                 target = CACHE_DIR / local_name
+                skip_marker = target.with_suffix(".skip")
 
-                if target.exists() and target.stat().st_size > 0:
+                # Skip if already downloaded or previously failed
+                if skip_marker.exists() or (target.exists() and target.stat().st_size > 0):
                     continue
 
                 log(f"downloading {identifier}/{remote_name} -> {local_name}")
@@ -235,6 +242,8 @@ def main() -> None:
                     downloaded += 1
                 except Exception as e:
                     log(f"download failed: {e}")
+                    # Mark as failed so we don't retry every cycle
+                    skip_marker.touch()
                     # Clean partial
                     part = target.with_suffix(target.suffix + ".part")
                     if part.exists():
@@ -256,4 +265,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
