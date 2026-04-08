@@ -25025,3 +25025,497 @@
 [2026-04-07  18:23:11] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
 [2026-04-07  18:23:11] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
 [2026-04-07  18:23:11] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "DESTERRONICS 27nov2025"
+[2026-04-07  19:38:08] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  19:38:08] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-07  21:34:30] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-07  21:34:30] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  21:34:30] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-220511"
+[2026-04-07  21:34:30] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-07  21:34:30] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-07  21:34:30] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-220511"
+[2026-04-07  23:32:20] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-07  23:32:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-08  00:13:02] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-08  00:13:02] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  00:13:02] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-190803"
+[2026-04-08  00:13:02] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-08  00:13:02] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  00:13:02] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-190803"
+[2026-04-08  00:29:54] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-08  00:29:54] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-08  00:30:39] EROR connection/_handle_connection HTTP request parsing failed
+[2026-04-08  01:53:11] INFO fserve/fserve_client_create checking for file /.e6685 (/usr/share/icecast2/web/.e6685)
+[2026-04-08  01:53:11] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.e6685" No such file or directory
+[2026-04-08  01:53:11] INFO fserve/fserve_client_create checking for file /.env (/usr/share/icecast2/web/.env)
+[2026-04-08  01:53:11] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.local (/usr/share/icecast2/web/.env.local)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.local" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.production (/usr/share/icecast2/web/.env.production)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.production" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.development (/usr/share/icecast2/web/.env.development)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.development" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.dev (/usr/share/icecast2/web/.env.dev)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.dev" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.prod (/usr/share/icecast2/web/.env.prod)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.prod" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.test (/usr/share/icecast2/web/.env.test)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.test" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.staging (/usr/share/icecast2/web/.env.staging)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.staging" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.backup (/usr/share/icecast2/web/.env.backup)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.backup" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.save (/usr/share/icecast2/web/.env.save)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.save" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.old (/usr/share/icecast2/web/.env.old)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.old" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.bak (/usr/share/icecast2/web/.env.bak)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.bak" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.tmp (/usr/share/icecast2/web/.env.tmp)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.tmp" No such file or directory
+[2026-04-08  01:53:12] INFO fserve/fserve_client_create checking for file /.env.swp (/usr/share/icecast2/web/.env.swp)
+[2026-04-08  01:53:12] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.swp" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env~ (/usr/share/icecast2/web/.env~)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env~" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.example (/usr/share/icecast2/web/.env.example)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.example" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.sample (/usr/share/icecast2/web/.env.sample)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.sample" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.dist (/usr/share/icecast2/web/.env.dist)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.dist" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.template (/usr/share/icecast2/web/.env.template)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.template" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.production.local (/usr/share/icecast2/web/.env.production.local)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.production.local" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.development.local (/usr/share/icecast2/web/.env.development.local)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.development.local" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.env.test.local (/usr/share/icecast2/web/.env.test.local)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.test.local" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.envrc (/usr/share/icecast2/web/.envrc)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.envrc" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /.flaskenv (/usr/share/icecast2/web/.flaskenv)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.flaskenv" No such file or directory
+[2026-04-08  01:53:13] INFO fserve/fserve_client_create checking for file /env (/usr/share/icecast2/web/env)
+[2026-04-08  01:53:13] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /env.js (/usr/share/icecast2/web/env.js)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/env.js" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /env.json (/usr/share/icecast2/web/env.json)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/env.json" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /app/.env (/usr/share/icecast2/web/app/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/app/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /src/.env (/usr/share/icecast2/web/src/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/src/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /config/.env (/usr/share/icecast2/web/config/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /backend/.env (/usr/share/icecast2/web/backend/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/backend/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /frontend/.env (/usr/share/icecast2/web/frontend/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/frontend/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /api/.env (/usr/share/icecast2/web/api/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/api/.env" No such file or directory
+[2026-04-08  01:53:14] INFO fserve/fserve_client_create checking for file /server/.env (/usr/share/icecast2/web/server/.env)
+[2026-04-08  01:53:14] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/server/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /client/.env (/usr/share/icecast2/web/client/.env)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/client/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /web/.env (/usr/share/icecast2/web/web/.env)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/web/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /public/.env (/usr/share/icecast2/web/public/.env)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/public/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /private/.env (/usr/share/icecast2/web/private/.env)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/private/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /var/.env (/usr/share/icecast2/web/var/.env)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/var/.env" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /docker-compose.yml (/usr/share/icecast2/web/docker-compose.yml)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/docker-compose.yml" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /docker-compose.yaml (/usr/share/icecast2/web/docker-compose.yaml)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/docker-compose.yaml" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /docker-compose.override.yml (/usr/share/icecast2/web/docker-compose.override.yml)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/docker-compose.override.yml" No such file or directory
+[2026-04-08  01:53:15] INFO fserve/fserve_client_create checking for file /docker-compose.dev.yml (/usr/share/icecast2/web/docker-compose.dev.yml)
+[2026-04-08  01:53:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/docker-compose.dev.yml" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /docker-compose.prod.yml (/usr/share/icecast2/web/docker-compose.prod.yml)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/docker-compose.prod.yml" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /config.js (/usr/share/icecast2/web/config.js)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.js" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /config.json (/usr/share/icecast2/web/config.json)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.json" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /settings.js (/usr/share/icecast2/web/settings.js)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/settings.js" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /settings.json (/usr/share/icecast2/web/settings.json)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/settings.json" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /secrets.json (/usr/share/icecast2/web/secrets.json)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/secrets.json" No such file or directory
+[2026-04-08  01:53:16] INFO fserve/fserve_client_create checking for file /credentials.json (/usr/share/icecast2/web/credentials.json)
+[2026-04-08  01:53:16] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/credentials.json" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /app.js (/usr/share/icecast2/web/app.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/app.js" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /main.js (/usr/share/icecast2/web/main.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/main.js" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /index.js (/usr/share/icecast2/web/index.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/index.js" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /server.js (/usr/share/icecast2/web/server.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/server.js" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /bundle.js (/usr/share/icecast2/web/bundle.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/bundle.js" No such file or directory
+[2026-04-08  01:53:17] INFO fserve/fserve_client_create checking for file /app.bundle.js (/usr/share/icecast2/web/app.bundle.js)
+[2026-04-08  01:53:17] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/app.bundle.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /main.bundle.js (/usr/share/icecast2/web/main.bundle.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/main.bundle.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /vendor.js (/usr/share/icecast2/web/vendor.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/vendor.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /chunk.js (/usr/share/icecast2/web/chunk.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/chunk.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /static/js/main.js (/usr/share/icecast2/web/static/js/main.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/static/js/main.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /static/js/app.js (/usr/share/icecast2/web/static/js/app.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/static/js/app.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /static/js/bundle.js (/usr/share/icecast2/web/static/js/bundle.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/static/js/bundle.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /dist/main.js (/usr/share/icecast2/web/dist/main.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/dist/main.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /dist/app.js (/usr/share/icecast2/web/dist/app.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/dist/app.js" No such file or directory
+[2026-04-08  01:53:18] INFO fserve/fserve_client_create checking for file /dist/bundle.js (/usr/share/icecast2/web/dist/bundle.js)
+[2026-04-08  01:53:18] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/dist/bundle.js" No such file or directory
+[2026-04-08  01:53:19] INFO fserve/fserve_client_create checking for file /build/static/js/main.js (/usr/share/icecast2/web/build/static/js/main.js)
+[2026-04-08  01:53:19] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/build/static/js/main.js" No such file or directory
+[2026-04-08  01:53:19] INFO fserve/fserve_client_create checking for file /assets/index.js (/usr/share/icecast2/web/assets/index.js)
+[2026-04-08  01:53:19] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/assets/index.js" No such file or directory
+[2026-04-08  01:53:19] INFO fserve/fserve_client_create checking for file /assets/app.js (/usr/share/icecast2/web/assets/app.js)
+[2026-04-08  01:53:19] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/assets/app.js" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /_next/static/chunks/main.js (/usr/share/icecast2/web/_next/static/chunks/main.js)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/_next/static/chunks/main.js" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /_next/static/chunks/app.js (/usr/share/icecast2/web/_next/static/chunks/app.js)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/_next/static/chunks/app.js" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /js/app.js (/usr/share/icecast2/web/js/app.js)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/js/app.js" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /js/main.js (/usr/share/icecast2/web/js/main.js)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/js/main.js" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /settings.py (/usr/share/icecast2/web/settings.py)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/settings.py" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /config.py (/usr/share/icecast2/web/config.py)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.py" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /secrets.py (/usr/share/icecast2/web/secrets.py)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/secrets.py" No such file or directory
+[2026-04-08  01:53:20] INFO fserve/fserve_client_create checking for file /config/secrets.yml (/usr/share/icecast2/web/config/secrets.yml)
+[2026-04-08  01:53:20] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/secrets.yml" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /config/master.key (/usr/share/icecast2/web/config/master.key)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/master.key" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /wp-config.php.bak (/usr/share/icecast2/web/wp-config.php.bak)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/wp-config.php.bak" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /wp-config.php.old (/usr/share/icecast2/web/wp-config.php.old)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/wp-config.php.old" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /wp-config.php.save (/usr/share/icecast2/web/wp-config.php.save)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/wp-config.php.save" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /wp-config.php.txt (/usr/share/icecast2/web/wp-config.php.txt)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/wp-config.php.txt" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /wp-config.php~ (/usr/share/icecast2/web/wp-config.php~)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/wp-config.php~" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /config/app.php (/usr/share/icecast2/web/config/app.php)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/app.php" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /application.properties (/usr/share/icecast2/web/application.properties)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/application.properties" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /application.yml (/usr/share/icecast2/web/application.yml)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/application.yml" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /application.yaml (/usr/share/icecast2/web/application.yaml)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/application.yaml" No such file or directory
+[2026-04-08  01:53:21] INFO fserve/fserve_client_create checking for file /application-dev.properties (/usr/share/icecast2/web/application-dev.properties)
+[2026-04-08  01:53:21] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/application-dev.properties" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /application-prod.properties (/usr/share/icecast2/web/application-prod.properties)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/application-prod.properties" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /appsettings.json (/usr/share/icecast2/web/appsettings.json)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/appsettings.json" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /appsettings.Development.json (/usr/share/icecast2/web/appsettings.Development.json)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/appsettings.Development.json" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /appsettings.Production.json (/usr/share/icecast2/web/appsettings.Production.json)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/appsettings.Production.json" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /config.yaml (/usr/share/icecast2/web/config.yaml)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.yaml" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /config.yml (/usr/share/icecast2/web/config.yml)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.yml" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /config.toml (/usr/share/icecast2/web/config.toml)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config.toml" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /serverless.yml (/usr/share/icecast2/web/serverless.yml)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/serverless.yml" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /serverless.yaml (/usr/share/icecast2/web/serverless.yaml)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/serverless.yaml" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /config/production.json (/usr/share/icecast2/web/config/production.json)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/production.json" No such file or directory
+[2026-04-08  01:53:22] INFO fserve/fserve_client_create checking for file /config/development.json (/usr/share/icecast2/web/config/development.json)
+[2026-04-08  01:53:22] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/development.json" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /config/default.json (/usr/share/icecast2/web/config/default.json)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/default.json" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /config/local.json (/usr/share/icecast2/web/config/local.json)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/local.json" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /conf/settings.json (/usr/share/icecast2/web/conf/settings.json)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/conf/settings.json" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /data/config.json (/usr/share/icecast2/web/data/config.json)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/data/config.json" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /actuator/env (/usr/share/icecast2/web/actuator/env)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/actuator/env" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /actuator/configprops (/usr/share/icecast2/web/actuator/configprops)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/actuator/configprops" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /api/config (/usr/share/icecast2/web/api/config)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/api/config" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /api/settings (/usr/share/icecast2/web/api/settings)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/api/settings" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /api/env (/usr/share/icecast2/web/api/env)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/api/env" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /backup/.env (/usr/share/icecast2/web/backup/.env)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/backup/.env" No such file or directory
+[2026-04-08  01:53:23] INFO fserve/fserve_client_create checking for file /backups/.env (/usr/share/icecast2/web/backups/.env)
+[2026-04-08  01:53:23] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/backups/.env" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /old/.env (/usr/share/icecast2/web/old/.env)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/old/.env" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /temp/.env (/usr/share/icecast2/web/temp/.env)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/temp/.env" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /tmp/.env (/usr/share/icecast2/web/tmp/.env)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/tmp/.env" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /.streamlit/secrets.toml (/usr/share/icecast2/web/.streamlit/secrets.toml)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.streamlit/secrets.toml" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /root/.streamlit/secrets.toml (/usr/share/icecast2/web/root/.streamlit/secrets.toml)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.streamlit/secrets.toml" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /root/.aws/credentials (/usr/share/icecast2/web/root/.aws/credentials)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.aws/credentials" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /home/ubuntu/.aws/credentials (/usr/share/icecast2/web/home/ubuntu/.aws/credentials)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.aws/credentials" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /home/ec2-user/.aws/credentials (/usr/share/icecast2/web/home/ec2-user/.aws/credentials)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ec2-user/.aws/credentials" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /home/node/.aws/credentials (/usr/share/icecast2/web/home/node/.aws/credentials)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/node/.aws/credentials" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /terraform.tfvars (/usr/share/icecast2/web/terraform.tfvars)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/terraform.tfvars" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /terraform.tfstate (/usr/share/icecast2/web/terraform.tfstate)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/terraform.tfstate" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /ecosystem.config.js (/usr/share/icecast2/web/ecosystem.config.js)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/ecosystem.config.js" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /secrets.yaml (/usr/share/icecast2/web/secrets.yaml)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/secrets.yaml" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /secrets.yml (/usr/share/icecast2/web/secrets.yml)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/secrets.yml" No such file or directory
+[2026-04-08  01:53:24] INFO fserve/fserve_client_create checking for file /.secrets (/usr/share/icecast2/web/.secrets)
+[2026-04-08  01:53:24] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.secrets" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.env.vault (/usr/share/icecast2/web/.env.vault)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.env.vault" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.aws/credentials (/usr/share/icecast2/web/.aws/credentials)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.aws/credentials" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.aws/config (/usr/share/icecast2/web/.aws/config)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.aws/config" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.docker/config.json (/usr/share/icecast2/web/.docker/config.json)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.docker/config.json" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /storage/framework/.env (/usr/share/icecast2/web/storage/framework/.env)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/storage/framework/.env" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /laravel/.env (/usr/share/icecast2/web/laravel/.env)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/laravel/.env" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /debug/vars (/usr/share/icecast2/web/debug/vars)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/debug/vars" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.git/logs/HEAD (/usr/share/icecast2/web/.git/logs/HEAD)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.git/logs/HEAD" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.git/config (/usr/share/icecast2/web/.git/config)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.git/config" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.azure/credentials (/usr/share/icecast2/web/.azure/credentials)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.azure/credentials" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.azure/accessTokens.json (/usr/share/icecast2/web/.azure/accessTokens.json)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.azure/accessTokens.json" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /.azure/azureProfile.json (/usr/share/icecast2/web/.azure/azureProfile.json)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.azure/azureProfile.json" No such file or directory
+[2026-04-08  01:53:25] INFO fserve/fserve_client_create checking for file /root/.azure/credentials (/usr/share/icecast2/web/root/.azure/credentials)
+[2026-04-08  01:53:25] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.azure/credentials" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /root/.azure/accessTokens.json (/usr/share/icecast2/web/root/.azure/accessTokens.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.azure/accessTokens.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /home/ubuntu/.azure/credentials (/usr/share/icecast2/web/home/ubuntu/.azure/credentials)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.azure/credentials" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /home/node/.azure/credentials (/usr/share/icecast2/web/home/node/.azure/credentials)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/node/.azure/credentials" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /azure-credentials.json (/usr/share/icecast2/web/azure-credentials.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/azure-credentials.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /azure.json (/usr/share/icecast2/web/azure.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/azure.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /service-principal.json (/usr/share/icecast2/web/service-principal.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/service-principal.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /.gcp/credentials.json (/usr/share/icecast2/web/.gcp/credentials.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.gcp/credentials.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /.gcp/service-account.json (/usr/share/icecast2/web/.gcp/service-account.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.gcp/service-account.json" No such file or directory
+[2026-04-08  01:53:26] INFO fserve/fserve_client_create checking for file /gcp-credentials.json (/usr/share/icecast2/web/gcp-credentials.json)
+[2026-04-08  01:53:26] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/gcp-credentials.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /gcp-service-account.json (/usr/share/icecast2/web/gcp-service-account.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/gcp-service-account.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /service-account.json (/usr/share/icecast2/web/service-account.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/service-account.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /google-credentials.json (/usr/share/icecast2/web/google-credentials.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/google-credentials.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /google-cloud-key.json (/usr/share/icecast2/web/google-cloud-key.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/google-cloud-key.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /firebase-adminsdk.json (/usr/share/icecast2/web/firebase-adminsdk.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/firebase-adminsdk.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /firebase-credentials.json (/usr/share/icecast2/web/firebase-credentials.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/firebase-credentials.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /root/.config/gcloud/application_default_credentials.json (/usr/share/icecast2/web/root/.config/gcloud/application_default_credentials.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.config/gcloud/application_default_credentials.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /root/.config/gcloud/credentials.db (/usr/share/icecast2/web/root/.config/gcloud/credentials.db)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.config/gcloud/credentials.db" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /home/ubuntu/.config/gcloud/application_default_credentials.json (/usr/share/icecast2/web/home/ubuntu/.config/gcloud/application_default_credentials.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.config/gcloud/application_default_credentials.json" No such file or directory
+[2026-04-08  01:53:27] INFO fserve/fserve_client_create checking for file /home/node/.config/gcloud/application_default_credentials.json (/usr/share/icecast2/web/home/node/.config/gcloud/application_default_credentials.json)
+[2026-04-08  01:53:27] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/node/.config/gcloud/application_default_credentials.json" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /app/credentials.json (/usr/share/icecast2/web/app/credentials.json)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/app/credentials.json" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /app/service-account.json (/usr/share/icecast2/web/app/service-account.json)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/app/service-account.json" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /config/gcp.json (/usr/share/icecast2/web/config/gcp.json)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/gcp.json" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /config/azure.json (/usr/share/icecast2/web/config/azure.json)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/config/azure.json" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /root/.config/hcloud/cli.toml (/usr/share/icecast2/web/root/.config/hcloud/cli.toml)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.config/hcloud/cli.toml" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /home/ubuntu/.config/hcloud/cli.toml (/usr/share/icecast2/web/home/ubuntu/.config/hcloud/cli.toml)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.config/hcloud/cli.toml" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /.hcloud.toml (/usr/share/icecast2/web/.hcloud.toml)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.hcloud.toml" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /hcloud.yml (/usr/share/icecast2/web/hcloud.yml)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/hcloud.yml" No such file or directory
+[2026-04-08  01:53:28] INFO fserve/fserve_client_create checking for file /root/.oci/config (/usr/share/icecast2/web/root/.oci/config)
+[2026-04-08  01:53:28] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.oci/config" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /home/ubuntu/.oci/config (/usr/share/icecast2/web/home/ubuntu/.oci/config)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.oci/config" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /.oci/config (/usr/share/icecast2/web/.oci/config)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.oci/config" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /oci-config (/usr/share/icecast2/web/oci-config)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/oci-config" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /root/.ovh.conf (/usr/share/icecast2/web/root/.ovh.conf)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.ovh.conf" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /home/ubuntu/.ovh.conf (/usr/share/icecast2/web/home/ubuntu/.ovh.conf)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.ovh.conf" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /.ovh.conf (/usr/share/icecast2/web/.ovh.conf)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.ovh.conf" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /ovh.conf (/usr/share/icecast2/web/ovh.conf)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/ovh.conf" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /root/.config/linode-cli (/usr/share/icecast2/web/root/.config/linode-cli)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.config/linode-cli" No such file or directory
+[2026-04-08  01:53:29] INFO fserve/fserve_client_create checking for file /home/ubuntu/.config/linode-cli (/usr/share/icecast2/web/home/ubuntu/.config/linode-cli)
+[2026-04-08  01:53:29] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.config/linode-cli" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /.linode-cli (/usr/share/icecast2/web/.linode-cli)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.linode-cli" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /root/.vultr-cli.yaml (/usr/share/icecast2/web/root/.vultr-cli.yaml)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/root/.vultr-cli.yaml" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /home/ubuntu/.vultr-cli.yaml (/usr/share/icecast2/web/home/ubuntu/.vultr-cli.yaml)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/home/ubuntu/.vultr-cli.yaml" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /.vultr-cli.yaml (/usr/share/icecast2/web/.vultr-cli.yaml)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/.vultr-cli.yaml" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /@fs/app/.env (/usr/share/icecast2/web/@fs/app/.env)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/.env" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /@fs/root/.env (/usr/share/icecast2/web/@fs/root/.env)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.env" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /@fs/proc/self/environ (/usr/share/icecast2/web/@fs/proc/self/environ)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/proc/self/environ" No such file or directory
+[2026-04-08  01:53:30] INFO fserve/fserve_client_create checking for file /@fs/.env (/usr/share/icecast2/web/@fs/.env)
+[2026-04-08  01:53:30] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/.env" No such file or directory
+[2026-04-08  01:53:30] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../root/.env"
+[2026-04-08  01:53:30] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../proc/self/environ"
+[2026-04-08  01:53:31] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../app/.env"
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/..%2f..%2f..%2f..%2f..%2froot/.env (/usr/share/icecast2/web/@fs/..%2f..%2f..%2f..%2f..%2froot/.env)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/..%2f..%2f..%2f..%2f..%2froot/.env" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/..%2f..%2f..%2f..%2f..%2fproc/self/environ (/usr/share/icecast2/web/@fs/..%2f..%2f..%2f..%2f..%2fproc/self/environ)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/..%2f..%2f..%2f..%2f..%2fproc/self/environ" No such file or directory
+[2026-04-08  01:53:31] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../root/.env"
+[2026-04-08  01:53:31] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../proc/self/environ"
+[2026-04-08  01:53:31] WARN util/util_normalise_uri Rejecting invalid path "/@fs/../../../../../app/.env"
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/root/.aws/credentials (/usr/share/icecast2/web/@fs/root/.aws/credentials)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.aws/credentials" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/home/ubuntu/.aws/credentials (/usr/share/icecast2/web/@fs/home/ubuntu/.aws/credentials)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/home/ubuntu/.aws/credentials" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/home/node/.aws/credentials (/usr/share/icecast2/web/@fs/home/node/.aws/credentials)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/home/node/.aws/credentials" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/app/.env.local (/usr/share/icecast2/web/@fs/app/.env.local)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/.env.local" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/app/.env.production (/usr/share/icecast2/web/@fs/app/.env.production)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/.env.production" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/src/.env (/usr/share/icecast2/web/@fs/src/.env)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/src/.env" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/root/.azure/credentials (/usr/share/icecast2/web/@fs/root/.azure/credentials)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.azure/credentials" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/root/.azure/accessTokens.json (/usr/share/icecast2/web/@fs/root/.azure/accessTokens.json)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.azure/accessTokens.json" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/home/ubuntu/.azure/credentials (/usr/share/icecast2/web/@fs/home/ubuntu/.azure/credentials)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/home/ubuntu/.azure/credentials" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/root/.config/gcloud/application_default_credentials.json (/usr/share/icecast2/web/@fs/root/.config/gcloud/application_default_credentials.json)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.config/gcloud/application_default_credentials.json" No such file or directory
+[2026-04-08  01:53:31] INFO fserve/fserve_client_create checking for file /@fs/home/ubuntu/.config/gcloud/application_default_credentials.json (/usr/share/icecast2/web/@fs/home/ubuntu/.config/gcloud/application_default_credentials.json)
+[2026-04-08  01:53:31] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/home/ubuntu/.config/gcloud/application_default_credentials.json" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/app/service-account.json (/usr/share/icecast2/web/@fs/app/service-account.json)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/service-account.json" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/app/credentials.json (/usr/share/icecast2/web/@fs/app/credentials.json)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/credentials.json" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/app/gcp-credentials.json (/usr/share/icecast2/web/@fs/app/gcp-credentials.json)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/app/gcp-credentials.json" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/root/.config/hcloud/cli.toml (/usr/share/icecast2/web/@fs/root/.config/hcloud/cli.toml)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.config/hcloud/cli.toml" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/root/.oci/config (/usr/share/icecast2/web/@fs/root/.oci/config)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.oci/config" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/root/.ovh.conf (/usr/share/icecast2/web/@fs/root/.ovh.conf)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.ovh.conf" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/root/.config/linode-cli (/usr/share/icecast2/web/@fs/root/.config/linode-cli)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.config/linode-cli" No such file or directory
+[2026-04-08  01:53:32] INFO fserve/fserve_client_create checking for file /@fs/root/.vultr-cli.yaml (/usr/share/icecast2/web/@fs/root/.vultr-cli.yaml)
+[2026-04-08  01:53:32] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/@fs/root/.vultr-cli.yaml" No such file or directory
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../proc/self/environ"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../root/.aws/credentials"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../home/ubuntu/.aws/credentials"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../root/.azure/credentials"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../root/.config/gcloud/application_default_credentials.json"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../root/.config/hcloud/cli.toml"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../root/.oci/config"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../proc/self/environ"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../app/.env"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.env"
+[2026-04-08  01:53:32] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.aws/credentials"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../home/ubuntu/.aws/credentials"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../home/node/.aws/credentials"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.azure/credentials"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.azure/accessTokens.json"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../home/ubuntu/.azure/credentials"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.config/gcloud/application_default_credentials.json"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../home/ubuntu/.config/gcloud/application_default_credentials.json"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../app/service-account.json"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../app/gcp-credentials.json"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.config/hcloud/cli.toml"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.oci/config"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.ovh.conf"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.config/linode-cli"
+[2026-04-08  01:53:33] WARN util/util_normalise_uri Rejecting invalid path "/../../../../../../../root/.vultr-cli.yaml"
+[2026-04-08  04:19:14] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  04:19:15] INFO fserve/fserve_client_create checking for file /sse (/usr/share/icecast2/web/sse)
+[2026-04-08  04:19:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/sse" No such file or directory
+[2026-04-08  04:19:15] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-08  04:19:15] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-08  05:43:32] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-08  05:43:32] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  05:43:32] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-200304"
+[2026-04-08  05:43:32] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-08  05:43:32] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  05:43:32] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-200304"
+[2026-04-08  07:13:38] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-08  07:13:38] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-08  07:38:47] INFO source/source_main listener count on /live.mp3 now 1
+[2026-04-08  07:44:09] INFO source/send_to_listener Client 2394 (172.18.0.3) has fallen too far behind, removing
+[2026-04-08  07:44:09] INFO source/source_main listener count on /live.mp3 now 0
+[2026-04-08  09:49:12] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-08  09:49:12] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  09:49:12] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-181123"
+[2026-04-08  09:49:12] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-08  09:49:12] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  09:49:12] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-181123"
+[2026-04-08  10:43:48] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  10:43:48] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  10:43:49] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  10:43:50] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  10:43:50] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  10:43:51] EROR connection/_handle_connection Wrong request type from client
+[2026-04-08  11:06:10] INFO fserve/fserve_client_create checking for file /favicon.ico (/usr/share/icecast2/web/favicon.ico)
+[2026-04-08  11:06:10] WARN fserve/fserve_client_create req for file "/usr/share/icecast2/web/favicon.ico" No such file or directory
+[2026-04-08  12:09:16] INFO admin/admin_handle_request Received admin command metadata on mount "/live.aac"
+[2026-04-08  12:09:16] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  12:09:16] INFO admin/command_metadata Metadata on mountpoint /live.aac changed to "Desterronics-190901"
+[2026-04-08  12:09:16] INFO admin/admin_handle_request Received admin command metadata on mount "/live.mp3"
+[2026-04-08  12:09:16] INFO util/util_conv_string converting metadata from UTF-8 to ISO8859-1
+[2026-04-08  12:09:16] INFO admin/command_metadata Metadata on mountpoint /live.mp3 changed to "Desterronics-190901"

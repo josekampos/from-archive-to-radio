@@ -1,17 +1,16 @@
 #!/usr/bin/env python3
 import os
 import re
-import json
 import time
-import math
-import shutil
 from pathlib import Path
 from urllib.parse import quote
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
-IA_ADVANCEDSEARCH = "https://archive.org/advancedsearch.php"
 IA_METADATA = "https://archive.org/metadata/{identifier}"
+IA_ADVANCEDSEARCH = "https://archive.org/advancedsearch.php"
 IA_DOWNLOAD = "https://archive.org/download/{identifier}/{filename}"
 
 RADIO_DIR = Path(os.getenv("RADIO_DIR", "/opt/archive-radio/radio/"))
@@ -29,8 +28,13 @@ CACHE_TARGET_COUNT = int(os.getenv("CACHE_TARGET_COUNT", "200"))
 CACHE_MAX_GB = float(os.getenv("CACHE_MAX_GB", "10"))
 FETCH_INTERVAL_SECONDS = int(os.getenv("FETCH_INTERVAL_SECONDS", "60"))
 
+# Session with automatic retries for transient server/network errors
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": "archive-radio-template/1.0 (+https://archive.org)"})
+_retry = Retry(total=3, backoff_factor=2, status_forcelist=[429, 502, 503, 504], allowed_methods=["GET"])
+_adapter = HTTPAdapter(max_retries=_retry)
+SESSION.mount("https://", _adapter)
+SESSION.mount("http://", _adapter)
 
 
 def log(msg: str) -> None:
@@ -44,17 +48,10 @@ def sanitize_title(s: str) -> str:
 
 
 def build_query() -> str:
-    # If user provided a full query, use it.
     if ARCHIVE_QUERY:
         return ARCHIVE_QUERY
-
-    # Otherwise generate a robust query from a handle.
-    # "creator" is a common field; "uploader" may exist on some items, so we try both.
     if not ARCHIVE_USER:
-        # Safe default: no-op query will return nothing; user must set .env
         return "identifier:__nonexistent__"
-
-    # Restrict to audio items; you can edit this in .env for other media.
     return f'(creator:("{ARCHIVE_USER}") OR uploader:("{ARCHIVE_USER}")) AND mediatype:(audio)'
 
 
@@ -76,8 +73,7 @@ def advanced_search_identifiers(query: str) -> list[str]:
         out.extend(ids)
         if len(ids) < ARCHIVE_ROWS:
             break
-    # De-dup preserving order
-    seen = set()
+    seen: set[str] = set()
     dedup = []
     for i in out:
         if i not in seen:
@@ -99,7 +95,6 @@ def identifiers_from_file() -> list[str]:
 
 
 def pick_audio_file(files: list[dict]) -> dict | None:
-    # Prefer original/derivative mp3 etc, avoid helper files.
     def score(f: dict) -> tuple:
         name = (f.get("name") or "").lower()
         ext = name.rsplit(".", 1)[-1] if "." in name else ""
@@ -109,7 +104,6 @@ def pick_audio_file(files: list[dict]) -> dict | None:
         bad = 1 if (name.startswith("_") or name.endswith(".torrent") or name.endswith("_meta.xml") or name.endswith("_files.xml")) else 0
         return (bad, ext_rank, src_rank, len(name))
     candidates = [f for f in files if isinstance(f, dict) and f.get("name")]
-    # Filter to audio extensions only
     candidates = [f for f in candidates if (f["name"].lower().rsplit(".", 1)[-1] if "." in f["name"] else "") in AUDIO_EXTS]
     if not candidates:
         return None
@@ -131,6 +125,22 @@ def cached_tracks() -> list[Path]:
     ]
 
 
+def handled_identifiers() -> set[str]:
+    """
+    Return the set of identifier prefixes already handled (downloaded or permanently skipped).
+    Local filenames are {identifier}__{stem}.ext or {identifier}__{stem}.skip,
+    so we extract the part before __ as the identifier.
+    """
+    prefixes: set[str] = set()
+    for p in CACHE_DIR.iterdir():
+        if not p.is_file():
+            continue
+        stem = p.stem
+        prefix = stem.split("__", 1)[0] if "__" in stem else stem
+        prefixes.add(prefix)
+    return prefixes
+
+
 def download_file(identifier: str, remote_name: str, target_path: Path) -> None:
     url = IA_DOWNLOAD.format(identifier=identifier, filename=quote(remote_name))
     part = target_path.with_suffix(target_path.suffix + ".part")
@@ -138,7 +148,7 @@ def download_file(identifier: str, remote_name: str, target_path: Path) -> None:
     if part.exists():
         headers["Range"] = f"bytes={part.stat().st_size}-"
 
-    with SESSION.get(url, headers=headers, stream=True, timeout=60) as r:
+    with SESSION.get(url, headers=headers, stream=True, timeout=120) as r:
         if r.status_code not in (200, 206):
             raise RuntimeError(f"download failed {r.status_code} for {url}")
         mode = "ab" if r.status_code == 206 else "wb"
@@ -149,12 +159,21 @@ def download_file(identifier: str, remote_name: str, target_path: Path) -> None:
     part.replace(target_path)
 
 
+def clean_partial(target: Path) -> None:
+    part = target.with_suffix(target.suffix + ".part")
+    if part.exists():
+        try:
+            part.unlink()
+        except Exception:
+            pass
+
+
 def enforce_cache_limits() -> None:
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     files = cached_tracks()
     # Count cap (soft)
     if len(files) > CACHE_TARGET_COUNT:
-        files.sort(key=lambda p: p.stat().st_mtime)  # oldest first
+        files.sort(key=lambda p: p.stat().st_mtime)
         for p in files[: max(0, len(files) - CACHE_TARGET_COUNT)]:
             try:
                 p.unlink()
@@ -211,20 +230,41 @@ def main() -> None:
                 ids = advanced_search_identifiers(query)
                 log(f"fetched identifiers from advancedsearch ({len(ids)})")
 
-            # Download until we have at least CACHE_TARGET_COUNT tracks (or run out)
+            # Build once per cycle - avoids repeated directory scans inside the loop
+            known = handled_identifiers()
+            track_count = len(cached_tracks())
+            log(f"cycle start: {track_count} tracks cached, {len(known)} identifiers already handled")
+
             downloaded = 0
+            skipped = 0
             for identifier in ids:
-                # Stop if we have enough
-                if len(cached_tracks()) >= CACHE_TARGET_COUNT:
+                if track_count >= CACHE_TARGET_COUNT:
+                    log(f"reached target of {CACHE_TARGET_COUNT} tracks, stopping downloads")
                     break
 
-                meta_url = IA_METADATA.format(identifier=identifier)
-                r = SESSION.get(meta_url, timeout=30)
-                if r.status_code != 200:
+                # Skip metadata fetch entirely if already downloaded or permanently failed
+                if identifier in known:
                     continue
+
+                # Fetch metadata
+                try:
+                    r = SESSION.get(IA_METADATA.format(identifier=identifier), timeout=30)
+                except Exception as e:
+                    log(f"metadata fetch error for {identifier} (transient, will retry): {e}")
+                    continue  # transient - retry next cycle, no skip marker
+
+                if r.status_code != 200:
+                    log(f"metadata {r.status_code} for {identifier}, skipping permanently")
+                    known.add(identifier)
+                    skipped += 1
+                    continue
+
                 meta = r.json()
                 f = pick_audio_file(meta.get("files", []))
                 if not f:
+                    log(f"no audio file found for {identifier}, skipping")
+                    known.add(identifier)
+                    skipped += 1
                     continue
 
                 remote_name = f["name"]
@@ -232,30 +272,30 @@ def main() -> None:
                 target = CACHE_DIR / local_name
                 skip_marker = target.with_suffix(".skip")
 
-                # Skip if already downloaded or previously failed
                 if skip_marker.exists() or (target.exists() and target.stat().st_size > 0):
+                    known.add(identifier)
                     continue
 
                 log(f"downloading {identifier}/{remote_name} -> {local_name}")
                 try:
                     download_file(identifier, remote_name, target)
+                    track_count += 1
                     downloaded += 1
-                except Exception as e:
-                    log(f"download failed: {e}")
-                    # Mark as failed so we don't retry every cycle
+                    known.add(identifier)
+                except RuntimeError as e:
+                    # Permanent HTTP error (e.g. 500, 404) - mark as skip
+                    log(f"download failed (permanent): {e}")
                     skip_marker.touch()
-                    # Clean partial
-                    part = target.with_suffix(target.suffix + ".part")
-                    if part.exists():
-                        try:
-                            part.unlink()
-                        except Exception:
-                            pass
-                    continue
+                    known.add(identifier)
+                    clean_partial(target)
+                except Exception as e:
+                    # Transient error (timeout, connection reset) - will retry next cycle
+                    log(f"download failed (transient, will retry): {e}")
+                    clean_partial(target)
 
             enforce_cache_limits()
             write_playlist()
-            log(f"playlist updated. downloaded this cycle: {downloaded}")
+            log(f"cycle done: {track_count} tracks, {downloaded} downloaded, {skipped} skipped")
 
         except Exception as e:
             log(f"cycle error: {e}")
